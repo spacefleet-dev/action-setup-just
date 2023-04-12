@@ -1,0 +1,17 @@
+name: Setup just
+author: Robin Thrift
+description: Install just
+branding:
+  icon: play
+  color: blue
+inputs:
+  just-version:
+    description: Version of just to install
+  github-token:
+    description: Github token to use to authenticate downloads/prevent rate limiting
+    required: false
+    default: ${{ github.token }}
+runs:
+  using: node16
+  main: dist/index.js
+
